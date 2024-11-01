@@ -15,6 +15,7 @@ interface FileTab {
 const CodeEditor = () => {
   const [activeFile, setActiveFile] = useState<string | null>(null);
   const [openTabs, setOpenTabs] = useState<FileTab[]>([]);
+  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({});
   const [files] = useState({
     'src': {
       type: 'folder',
@@ -50,16 +51,13 @@ const CodeEditor = () => {
       const currentPath = path ? `${path}/${key}` : key;
       
       if (value.type === 'folder') {
+        const isOpen = openFolders[currentPath];
         return (
           <div key={currentPath} className="ml-2">
-            <Collapsible>
+            <Collapsible open={isOpen} onOpenChange={(open) => setOpenFolders(prev => ({ ...prev, [currentPath]: open }))}>
               <CollapsibleTrigger className="flex items-center gap-2 hover:bg-gray-700 p-1 rounded w-full">
-                {({ open }) => (
-                  <>
-                    {open ? <FolderOpen className="h-4 w-4" /> : <Folder className="h-4 w-4" />}
-                    <span className="text-sm">{key}</span>
-                  </>
-                )}
+                {isOpen ? <FolderOpen className="h-4 w-4" /> : <Folder className="h-4 w-4" />}
+                <span className="text-sm">{key}</span>
               </CollapsibleTrigger>
               <CollapsibleContent>
                 {renderFileTree(value.children, currentPath)}
