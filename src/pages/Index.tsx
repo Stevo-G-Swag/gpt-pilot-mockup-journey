@@ -1,12 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import CodeEditor from "@/components/CodeEditor";
+import ChatInterface from "@/components/ChatInterface";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <main className="container mx-auto py-6 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-8rem)]">
+          <div className="h-full">
+            <CodeEditor />
+          </div>
+          <div className="h-full">
+            <ChatInterface />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
