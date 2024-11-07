@@ -2,25 +2,25 @@
 
 This roadmap contains a series of prompts that can be used sequentially to build out the GPT-Pilot application. Each prompt builds upon the previous implementations.
 
-## Phase 1: Core Editor Enhancement
+## Phase 1: Core Editor Enhancement ✅
 
-1. "Add Monaco Editor integration to replace the current mock code editor. Include syntax highlighting for Python, JavaScript, and TypeScript. Make sure it's responsive and maintains the current dark theme."
+1. ✅ "Add Monaco Editor integration to replace the current mock code editor. Include syntax highlighting for Python, JavaScript, and TypeScript. Make sure it's responsive and maintains the current dark theme."
 
-2. "Implement file tree navigation in a collapsible sidebar on the left side of the code editor. Include sample files and folders with icons for different file types."
+2. ✅ "Implement file tree navigation in a collapsible sidebar on the left side of the code editor. Include sample files and folders with icons for different file types."
 
-3. "Add a tab system above the code editor to handle multiple open files. Include close buttons and an indicator for unsaved changes."
+3. ✅ "Add a tab system above the code editor to handle multiple open files. Include close buttons and an indicator for unsaved changes."
 
-## Phase 2: AI Integration
+## Phase 2: AI Integration ✅
 
-4. "Implement a proper chat history system with message persistence using local storage. Add timestamps and the ability to clear chat history."
+4. ✅ "Implement a proper chat history system with message persistence using local storage. Add timestamps and the ability to clear chat history."
 
-5. "Add typing indicators and loading states when the AI is 'thinking'. Include smooth transitions and animations for status changes."
+5. ✅ "Add typing indicators and loading states when the AI is 'thinking'. Include smooth transitions and animations for status changes."
 
-6. "Create an AI suggestions panel that appears inline with the code editor, similar to GitHub Copilot. Include accept/reject buttons for each suggestion."
+6. ✅ "Create an AI suggestions panel that appears inline with the code editor, similar to GitHub Copilot. Include accept/reject buttons for each suggestion."
 
-## Phase 3: Project Management
+## Phase 3: Project Management 🚧
 
-7. "Add a project configuration panel where users can set up their project preferences, including language, framework, and coding style guidelines."
+7. 🚧 "Add a project configuration panel where users can set up their project preferences, including language, framework, and coding style guidelines."
 
 8. "Implement a command palette (triggered by Cmd/Ctrl + K) for quick actions like creating new files, searching in project, and running AI commands."
 
@@ -71,5 +71,10 @@ This roadmap contains a series of prompts that can be used sequentially to build
 26. "Create production deployment configurations and documentation."
 
 Each prompt can be given to the AI assistant sequentially to build out the feature. The assistant will implement the requested functionality while maintaining existing features and ensuring code quality.
+
+Legend:
+✅ - Completed
+🚧 - In Progress
+(unmarked) - Not Started
 
 Note: Some prompts may need to be broken down into smaller sub-tasks depending on complexity.
