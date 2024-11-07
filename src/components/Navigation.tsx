@@ -1,4 +1,5 @@
-import { Rocket, Settings, User } from "lucide-react";
+import { Rocket, User } from "lucide-react";
+import ProjectConfigPanel from "./ProjectConfigPanel";
 
 const Navigation = () => {
   return (
@@ -9,9 +10,7 @@ const Navigation = () => {
           <span className="text-xl font-bold text-white">GPT-Pilot</span>
         </div>
         <div className="flex items-center gap-4">
-          <button className="text-white hover:text-secondary transition-colors">
-            <Settings className="h-5 w-5" />
-          </button>
+          <ProjectConfigPanel />
           <button className="text-white hover:text-secondary transition-colors">
             <User className="h-5 w-5" />
           </button>
